@@ -20,6 +20,9 @@ body{
     object-position: center;
     width: 100%;
 }
+.card{
+    border-right-color: yellow;
+}
 /* .carousel-inner img {
     width: 100%;
     max-height: 460px;
