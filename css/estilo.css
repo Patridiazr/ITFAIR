@@ -67,7 +67,7 @@ body{
 }
 
 .modalDialog:target {
-    opacity:1;
+    opacity:2;
     pointer-events: auto;
 }
 
@@ -84,16 +84,15 @@ body{
 }
 
 .close {
-    background: #606061;
-    color: #FFFFFF;
+    opacity: 4;
+    background: #ff0000;
+    color: rgb(206, 0, 0,0.5);
     line-height: 25px;
     position: absolute;
     right: -12px;
     text-align: center;
     top: -10px;
     width: 24px;
-    text-decoration: none;
-    font-weight: bold;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
@@ -102,7 +101,7 @@ body{
     box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: #00d9ff; }
+.close:hover { background: #ff0000; }
 
 
 /* carrusel home */
@@ -161,4 +160,9 @@ body{
     font-family: 'Fontawesome';
     float: left;
     margin-right: 10px;
+}
+div .modalDialog a{
+    background-color:coral;
+    color: #000;
+      
 }
