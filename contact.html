@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flexboxgrid.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script src="js/validar.js"></script>
     <title>Contact Us</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
 <div>
     <h1 style="text-align: center">CONTACT US</h1>
     <br>
-    <h4 style="text-align: center">rellenar con una wea linda e inspiradora para que se motive a enviar un correo</h4>
+    <h4 style="text-align: center">If you need help or are disoriented, contact us, we have all the information you may need</h4>
     <br>
 <div class="container">
     <form action="#" id="formulario" method="get">
@@ -44,30 +45,30 @@
           <div class="form-group"></div>
           <!--name-->
           <h3  for="name">Name *</h3>
-          <input style="text-align: left" type="text" class="form-control" name="name" required  placeholder="Enter your Name" id="">   
+          <input style="text-align: left" type="text" class="form-control" name="name" required  placeholder="Enter your Name" id="nom">   
           <br>
           <!--Email-->
           <h3 for="Email">Email *</h3>
-          <input  style="text-align: left" type="email" class="form-control" name="Email" required  placeholder="Enter your Email" id="">
+          <input  style="text-align: left" type="email" class="form-control" name="Email" required  placeholder="Enter your Email" id="cor">
           <br>
         <!--phone-->
           <h3 for="phone">Phone</h3>
-            <input style="text-align: left" type="number" class="form-control" name="phone" placeholder="Enter your phone" id="" >          
+            <input style="text-align: left" type="number" class="form-control" name="phone" placeholder="Enter your phone" id="fon" >          
             <br> 
         <!--Organizacion-->
           <h3  for="Org">Organization/Company</h3>
-          <input style="text-align: left" type="text" class="form-control" name="Org" placeholder="Enter your Organization/Company" id="">   
+          <input style="text-align: left" type="text" class="form-control" name="Org" placeholder="Enter your Organization/Company" id="org">   
           <br>          
           <!--menssage-->
-          <h3  for="Menssage">Menssage *</h3>
-          <textarea style="text-align: left" type="text" name="menssage" rows="10" cols="40"  placeholder="Enter your menssage" id=""></textarea>    
+          <h3  for="Menssage">Message *</h3>
+          <textarea style="text-align: left" type="text" name="menssage" rows="10" cols="40"  placeholder="Enter your message" id="mes"></textarea>    
           <br>
 
 
 
         <br>  
           <button type="reset" class="btn btn-danger btn-block" >Clear</button>
-          <button type="submit" class="btn btn-outline-success btn-block"  value="guardar">Send</button>
+          <button type="submit" class="btn btn-outline-success btn-block" onclick="return validarFormulario()"  value="guardar">Send</button>
           <br>
         </div>
         </div>
