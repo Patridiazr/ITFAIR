@@ -166,3 +166,19 @@ div .modalDialog a{
     color: #000;
       
 }
+
+/* Tittle Home */
+.jumbotron {
+    background-color:darkcyan;
+    color: aliceblue;
+    margin:0;
+    
+
+}
+ #testimonio{
+    background-color: darkcyan;
+    color: aliceblue;
+    text-align-last: center;
+    size:20;
+    margin: 20px;
+}
