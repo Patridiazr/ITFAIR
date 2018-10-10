@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flexboxgrid.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
     <title>Sing Up</title>
 </head>
 <body>
@@ -52,36 +53,58 @@
     </div>
 
 <!--Registro-->    
-<form action="action_page.php" style="border:1px solid #ccc">
+<form name="form1" action="action_page.php" style="border:1px solid #ccc">
     <div class="container">
 
-      <label for="name"><b>Name *</b></label>
-      <input type="text" placeholder="Enter Name" name="name" required>
+        <label for="name"><b>Name *</b></label>
+        <input type="text" placeholder="Enter Name" name="name" id="nom" required>
       
-      <label for="nationality"><b>Nationality </b></label>
-      <input type="text" placeholder="Enter Nationality" name="nationality" >
+        <label for="nationality"><b>Nationality </b></label>
+
+        <select name="Cnac" id="comboNac" onchange="if(this.value=='3' || this.value == 3){ document.getElementById('nac').disabled = false} else {document.getElementById('nac').disabled = true }" >
+            <option value="0">a</option>
+            <option value="1">b</option>
+            <option value="2">c</option>
+            <option value="3">d</option>        
+        </select>
+
+        <input type="text" placeholder="Enter Nationality" name="nationality" id="nac" disabled >
+      
   
-      <label for="email"><b>Email *</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="email"><b>Email *</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="ema" required>
   
-      <label for="psw"><b>Password *</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw"><b>Password *</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="pas" required>
   
-      <label for="psw-repeat"><b>Repeat Password *</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <label for="psw-repeat"><b>Repeat Password *</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pasR" required>
   
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
+        <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</label>
   
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
   
-      <div class="clearfix">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
+        <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn" onclick="return valSingUp()">Sign Up</button>
+        </div>
     </div>
-  </form>
+</form>
+<script>
+
+    $('#comboNac').onchange(function(){
+	console.log("input cambiado");
+	var value = $('#comboNac').val();
+	console.log(value);
+    if(value == 3 || value == "3"){
+  	    $('#nac').prop('disabled',false);
+    }s
+});
+</script>
+<script src="js/app.js"></script> 
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 </body>
 </html>
